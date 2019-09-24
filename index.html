@@ -18,14 +18,14 @@
   				<li><a href="contacts.html">Контакты</a></li>
   			</ul>
   			<ul>
-  				<li><button type="button">Войти</button></li>
+  				<li><a href="login.html" aria-label="Войти на сайт">Вход</a></li>
   			</ul>  			
   		</nav>
   	</header>
   	<main>
-  		<h1>Барбершоп «Бородинский»</h1>
+  		<h1 class="visually-hidden">Барбершоп «Бородинский»</h1>
   		<section>
-  			<h2>Преимущества</h2>  			
+  			<h2 class="visually-hidden">Преимущества</h2>  			
   			<ul>
   				<li>
   					<h3>Быстро</h3>
@@ -58,7 +58,7 @@
   		<section>
   			<h2>Фотогалерея</h2>
   			<figure>
-  				<a><img src="img/barber-room.jpg" alt="Интерьер" width="286" height="164"></a>
+  				<a href="#"><img src="img/barber-room.jpg" alt="Интерьер нашей студии" width="286" height="164"></a>
   			</figure>
   			<button type="button">Назад</button>
   			<button type="button">Вперед</button>
@@ -78,11 +78,89 @@
   			<a href="map.html">Как проехать</a>
   			<a href="contacts.html">Обратная связь</a>  			
   		</section>
+
+
   		<section>
   			<h2>Записаться</h2>
   			<p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-  			<!-- ФОРМА -->  			
+  			<form method="post" action="https://echo.htmlacademy.ru">
+
+  				<p>
+  					<label for="wish-date">Дата</label>
+  					<input type="text" id="wish-date" name="date" value="" placeholder="08.10.2017">  					
+  				</p>
+
+  				<p>
+  					<label for="wish-time">Время</label>
+  					<input type="text" id="wish-time" name="time" value="" placeholder="10:00">  					
+  				</p>
+
+  				<p>
+  					<label for="your-name">Ваше имя</label>
+  					<input type="text" id="your-name" name="name" value="" placeholder="Борода">  					
+  				</p>
+
+  				<p>
+  					<label for="your-phone">Телефон</label>
+  					<input type="tel" id="your-phone" name="phone" value="" placeholder="+7 123 456-78-90"> 			
+  				</p>  				
+
+  				<button type="submit">Отправить</button> 				
+
+  			</form> 			
   		</section>
+
+
+
+  		<section>    
+	    	<h2>Личный кабинет</h2>
+	      	<p>Введите свой логин и пароль.</p>
+	      	<form action="https://echo.htmlacademy.ru" method="post">
+
+	      		<p>
+  					<label for="user-login">Логин</label>
+  					<input type="text" id="user-login" name="login" value="" placeholder="email@example.com">  				
+  				</p>
+
+  				<p>
+  					<label for="user-password">Пароль</label>
+  					<input type="password" id="user-password" name="pass" value="" placeholder="******">  					
+  				</p>
+
+  				<p>
+  					<label>
+  						<input type="checkbox" name="remember">
+  						Запомните меня
+  					</label>
+  					<a href="#">Я забыл пароль!</a>
+  				</p>
+
+  				
+
+  				<button type="submit">
+  					Войти  					
+  				</button>
+	      		
+	      	</form>
+
+	      		<button type="button">
+  					Закрыть  					
+  				</button>
+
+	    </section>
+
+
+
+	    <section>     
+		      <h2>Как до нас добраться</h2>
+		      <img src="img/map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" height="560" width="780">
+		      <button type="button">Закрыть</button>
+		</section>
+
+
+
+
+
   	</main>
 
   	<footer>
@@ -105,15 +183,6 @@
         <a href="https://htmlacademy.ru">HTML Academy</a>
       </p>
   	</footer>
-    <section>    <!-- Первый попап -->
-    	<h2>Личный кабинет</h2>
-      	<p>Введите свой логин и пароль.</p>
-      	<!-- Здесь будет форма -->
-      	<button type="button">Закрыть</button>
-    </section>
-    <section>     <!-- Второй попап -->
-      <h2>Как до нас добраться</h2>
-      <button type="button">Закрыть</button>
-    </section>
+    
   </body>
 </html>
